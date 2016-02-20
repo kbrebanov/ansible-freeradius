@@ -1,6 +1,8 @@
 freeradius
 ==========
 
+[![Build Status](https://travis-ci.org/kbrebanov/ansible-freeradius.svg?branch=master)](https://travis-ci.org/kbrebanov/ansible-freeradius)
+
 Installs FreeRADIUS
 
 Requirements
