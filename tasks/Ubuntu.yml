@@ -2,6 +2,12 @@
 # tasks file for freeradius (Ubuntu specifc)
 
 - name: Install FreeRADIUS packages
-  apt: name={{ item }} state=present update_cache=yes
-  with_items: freeradius_packages
-  tags: freeradius
+  become: yes
+  apt:
+    name: "{{ item }}"
+    state: present
+    update_cache: yes
+  with_items:
+    - "{{ freeradius_packages }}"
+  tags:
+    - freeradius

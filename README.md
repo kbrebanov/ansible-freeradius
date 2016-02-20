@@ -1,12 +1,12 @@
 freeradius
 ==========
 
-Installs and configures FreeRADIUS
+Installs FreeRADIUS
 
 Requirements
 ------------
 
-This role requires Ansible 1.4 or higher.
+This role requires Ansible 1.9 or higher.
 
 Role Variables
 --------------
@@ -22,10 +22,10 @@ Example Playbook
 ----------------
 
 Install FreeRADIUS
-```
+```yaml
 - hosts: all
   roles:
-    - { role: kbrebanov.freeradius }
+    - kbrebanov.freeradius
 ```
 
 License

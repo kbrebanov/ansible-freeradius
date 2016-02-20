@@ -2,9 +2,17 @@
 # handlers file for freeradius
 
 - name: restart freeradius
-  service: name={{ freeradius_service_name }} state=restarted
-  tags: freeradius
+  become: yes
+  service:
+    name: "{{ freeradius_service_name }}"
+    state: restarted
+  tags:
+    - freeradius
 
 - name: reload freeradius
-  service: name={{ freeradius_service_name }} state=reloaded
-  tags: freeradius
+  become: yes
+  service:
+    name: "{{ freeradius_service_name }}"
+    state: reloaded
+  tags:
+    - freeradius
